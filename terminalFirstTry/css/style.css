@@ -339,3 +339,28 @@ a:focus {
   }
 
 
+
+
+
+  .terminal-body {
+    padding: 1em;
+    color: #e0e0e0;
+    height: 50vh;
+    min-height: 30em;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  /* Cursor End */
+.terminal-body {
+  display: block;
+  line-height: 1.3em;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: 0.05em;
+  animation: typing 0.5s steps(30, end);
+}

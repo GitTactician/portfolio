@@ -76,6 +76,7 @@
           </ul>
       </div>
   </div>
+  
   <div id="terminal-container">
     <div class="terminal-header">
       <div class="terminal-header-buttons">
@@ -83,11 +84,11 @@
           <div class="terminal-button minimise"></div>
           <div class="terminal-button expand"></div>
       </div>
+    </div>
       <div class="terminal-body">
-        
         <div id="terminal">
-          <a id="before"></a>
-        </div>
+        <a id="before"></a>
+      </div id="terminal">
         <div id="command" onclick="$('texter').focus();">
           <textarea
             type="text"
@@ -98,9 +99,11 @@
             onkeypress="typeIt(this, event);"
             autofocus
           ></textarea>
+        
           <div id="liner">
             <span id="typer"></span><b class="cursor" id="cursor">█</b>
           </div>
+        
         </div>
               <nav class="terminal-tmux-bar">
                   <div class="screen">0</div>
