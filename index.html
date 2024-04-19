@@ -13,6 +13,21 @@
     <!-- Favicon -->
     <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
     <title>Portfolio | Houssem Korbi</title>
+    <meta charset="UTF-8">
+    <title>Terminal Project</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="img/fav-icon.png" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJ9TR5T9S2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-QJ9TR5T9S2');
+    </script>
 </head>
 <body oncontextmenu="return false">
 
@@ -40,33 +55,65 @@
 </header>
 <!-- navbar ends -->
 
-
 <!-- hero section starts -->
 <section class="home" id="home">
-    <div id="particles-js"></div>
+  <div id="particles-js"></div>
 
-    <div class="content">
-    <h2>Hi There,<br/> I'm Houssem <span>Korbi</span></h2>
-    <p>i am into <span class="typing-text"></span></p>
-    <a href="#about" class="btn"><span>About Me</span>
-      <i class="fas fa-arrow-circle-down"></i>
-    </a>
-    <div class="socials">
-        <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/jigar-sable/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
-          <li><a class="github" aria-label="GitHub" href="https://github.com/jigar-sable" target="_blank"><i class="fab fa-github"></i></a></li>
-          <li><a class="twitter" aria-label="Twitter" href="https://twitter.com/jigar_sable" target="_blank"><i class="fab fa-twitter"></i></a></li>
-          <li><a class="telegram" aria-label="Telegram" href="https://t.me/lifecode5" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
-          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/jigarsable.dev"><i class="fab fa-instagram" target="_blank"></i></a></li>
-          <li><a class="dev" aria-label="Dev" href="https://dev.to/jigarsable" target="_blank"><i class="fab fa-dev"></i></a></li>
-        </ul>
+  <div class="content">
+      <h2>Hi There,<br/> I'm Houssem <span>Korbi</span></h2>
+      <p>I am into <span class="typing-text"></span></p>
+      <a href="#about" class="btn"><span>About Me</span>
+          <i class="fas fa-arrow-circle-down"></i>
+      </a>
+      <div class="socials">
+          <ul class="social-icons">
+              <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/jigar-sable/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+              <li><a class="github" aria-label="GitHub" href="https://github.com/jigar-sable" target="_blank"><i class="fab fa-github"></i></a></li>
+              <li><a class="twitter" aria-label="Twitter" href="https://twitter.com/jigar_sable" target="_blank"><i class="fab fa-twitter"></i></a></li>
+              <li><a class="telegram" aria-label="Telegram" href="https://t.me/lifecode5" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+              <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/jigarsable.dev" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a class="dev" aria-label="Dev" href="https://dev.to/jigarsable" target="_blank"><i class="fab fa-dev"></i></a></li>
+          </ul>
       </div>
-    </div>
-<div class="image">
-    <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="">
-</div>
+  </div>
+  <div id="terminal-container">
+    <div class="terminal-header">
+      <div class="terminal-header-buttons">
+          <div class="terminal-button close"></div>
+          <div class="terminal-button minimise"></div>
+          <div class="terminal-button expand"></div>
+      </div>
+      <div class="terminal-body">
+        
+        <div id="terminal">
+          <a id="before"></a>
+        </div>
+        <div id="command" onclick="$('texter').focus();">
+          <textarea
+            type="text"
+            id="texter"
+            onkeyup="typeIt(this, event)"
+            onkeydown="typeIt(this, event); 
+                       moveIt(this.value.length, event)"
+            onkeypress="typeIt(this, event);"
+            autofocus
+          ></textarea>
+          <div id="liner">
+            <span id="typer"></span><b class="cursor" id="cursor">█</b>
+          </div>
+        </div>
+              <nav class="terminal-tmux-bar">
+                  <div class="screen">0</div>
+                  <div class="bar">zsh</div>
+                  <div class="battery">&hearts; 100%</div>
+                  <div class="name">Houssem's Laptop</div>
+              </nav>
+          </div>
+      </div>
+  </div>
 </section>
 <!-- hero section ends -->
+
 
 
 <!-- about section starts -->
@@ -410,6 +457,8 @@
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
 <script src="./assets/js/script.js"></script>
-
+<script src="js/caret.js"></script>
+    <script src="js/commands.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
